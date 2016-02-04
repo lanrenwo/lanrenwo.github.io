@@ -4,7 +4,7 @@
   <subtitle><![CDATA[心有多大，舞台就有多大。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.hongfanqu.com/"/>
-  <updated>2016-02-04T06:47:56.242Z</updated>
+  <updated>2016-02-04T06:52:29.242Z</updated>
   <id>http://www.hongfanqu.com/</id>
   
   <author>
@@ -16,10 +16,10 @@
   
   <entry>
     <title><![CDATA[RTX发送点餐提醒]]></title>
-    <link href="http://www.hongfanqu.com/2016/02/04/RTX%E5%8F%91%E9%80%81%E7%82%B9%E9%A4%90%E6%8F%90%E9%86%92/"/>
-    <id>http://www.hongfanqu.com/2016/02/04/RTX发送点餐提醒/</id>
+    <link href="http://www.hongfanqu.com/2016/02/04/rtx-notify/"/>
+    <id>http://www.hongfanqu.com/2016/02/04/rtx-notify/</id>
     <published>2016-02-04T06:03:38.000Z</published>
-    <updated>2016-02-04T06:47:56.242Z</updated>
+    <updated>2016-02-04T06:52:29.242Z</updated>
     <content type="html"><![CDATA[<p>我们公司大概从2008年开始使用RTX内部通讯工具，直到2014年团队才使用RTX的Web API，陆陆续续实现了请假、预定会议室、故障报告等RTX提醒，给工作带来了很多便利，唯独只剩下点餐提醒，一直没有使用，依然还是人工通过公司群，提醒大家点餐。</p>
 <p>趁年末比较有空，好好研究了RTX SDK，从中发现了很多接口，最终顺利实现了自动发送点餐提醒。</p>
 <p>下面给大家说一下具体业务代码：</p>
@@ -42,6 +42,14 @@
     <![CDATA[<p>我们公司大概从2008年开始使用RTX内部通讯工具，直到2014年团队才使用RTX的Web API，陆陆续续实现了请假、预定会议室、故障报告等RTX提醒，给工作带来了很多便利，唯独只剩下点餐提醒，一直没有使用，依然还是人工通过公司群，提醒大家点餐。</p>
 <p>趁年末比较]]>
     </summary>
+    
+      <category term="notify" scheme="http://www.hongfanqu.com/tags/notify/"/>
+    
+      <category term="rtx" scheme="http://www.hongfanqu.com/tags/rtx/"/>
+    
+      <category term="rtx群广播" scheme="http://www.hongfanqu.com/tags/rtx%E7%BE%A4%E5%B9%BF%E6%92%AD/"/>
+    
+      <category term="PHP编程" scheme="http://www.hongfanqu.com/categories/PHP%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
