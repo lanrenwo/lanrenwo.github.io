@@ -4,7 +4,7 @@
   <subtitle><![CDATA[心有多大，舞台就有多大。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.hongfanqu.com/"/>
-  <updated>2016-01-07T15:43:57.000Z</updated>
+  <updated>2016-02-04T06:47:56.242Z</updated>
   <id>http://www.hongfanqu.com/</id>
   
   <author>
@@ -13,6 +13,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[RTX发送点餐提醒]]></title>
+    <link href="http://www.hongfanqu.com/2016/02/04/RTX%E5%8F%91%E9%80%81%E7%82%B9%E9%A4%90%E6%8F%90%E9%86%92/"/>
+    <id>http://www.hongfanqu.com/2016/02/04/RTX发送点餐提醒/</id>
+    <published>2016-02-04T06:03:38.000Z</published>
+    <updated>2016-02-04T06:47:56.242Z</updated>
+    <content type="html"><![CDATA[<p>我们公司大概从2008年开始使用RTX内部通讯工具，直到2014年团队才使用RTX的Web API，陆陆续续实现了请假、预定会议室、故障报告等RTX提醒，给工作带来了很多便利，唯独只剩下点餐提醒，一直没有使用，依然还是人工通过公司群，提醒大家点餐。</p>
+<p>趁年末比较有空，好好研究了RTX SDK，从中发现了很多接口，最终顺利实现了自动发送点餐提醒。</p>
+<p>下面给大家说一下具体业务代码：</p>
+<ol>
+<li><p><strong>设置消息内容：</strong><br>超链接的格式：[文本|链接|close]<br>close：可选项，代表单击链接后，顺便关闭提示框  </p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$msg</span>       = <span class="string">"　　　　　　　　　　　　　　　　　　　　　"</span> <span class="comment">// 以\n开头无效，所以用空格填充换行</span></span><br><span class="line">            .<span class="string">"点餐截止时间在11:00，请童鞋们在此时间前完成点餐。 \n\n"</span></span><br><span class="line">            .<span class="string">"[立即进入点餐系统 &gt;&gt;|http://eat.cc/index.html|close]"</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>获取公司群里所有人员：</strong>  </p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 获取群组的ID</span></span><br><span class="line"><span class="variable">$ObjApi</span>          = <span class="keyword">new</span> COM(<span class="string">"Rtxserver.rtxobj"</span>);</span><br><span class="line"><span class="variable">$RTXObj</span>          = <span class="keyword">new</span> COM(<span class="string">'RTXSAPIRootObj.RTXSAPIRootObj'</span>);</span><br><span class="line"><span class="variable">$DisGroupManager</span> = <span class="variable">$RTXObj</span>-&gt;DisGroupManager;</span><br><span class="line"><span class="variable">$group_id</span>        = <span class="variable">$DisGroupManager</span>-&gt;GetDisGroupIdsByName(<span class="string">"公司群"</span>);</span><br><span class="line"><span class="variable">$arry</span>            = explode(<span class="string">'"'</span>, <span class="variable">$group_id</span>);</span><br><span class="line"><span class="variable">$group_id</span>        = <span class="variable">$arry</span>[<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取群组的所有的用户</span></span><br><span class="line"><span class="variable">$group_users</span> = <span class="variable">$DisGroupManager</span>-&gt;GetDisGroupUsers(<span class="variable">$group_id</span>);</span><br><span class="line">preg_match_all( <span class="string">"/\&lt;User\&gt;(.*?)\&lt;\/User\&gt;/"</span>, <span class="variable">$group_users</span>, <span class="variable">$users</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>获取群里的在线人员：</strong></p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 获取在线用户</span></span><br><span class="line"><span class="keyword">foreach</span> (<span class="variable">$users</span>[<span class="number">1</span>] <span class="keyword">as</span> <span class="variable">$user</span>) &#123;</span><br><span class="line">    <span class="variable">$status</span> = getStatus(<span class="variable">$ObjApi</span>, <span class="variable">$user</span>);</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable">$status</span> &lt; <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">continue</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="variable">$online_users</span>[] = <span class="variable">$user</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">unset</span>(<span class="variable">$users</span>);</span><br><span class="line"><span class="variable">$receiver</span> = implode(<span class="string">','</span>, <span class="variable">$online_users</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * 获取某个用户是否在线</span><br><span class="line"> *</span><br><span class="line"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getStatus</span><span class="params">(<span class="variable">$ObjApi</span>, <span class="variable">$receiver</span>)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="variable">$state</span> = -<span class="number">1</span>;</span><br><span class="line">    <span class="variable">$objProp</span> = <span class="keyword">new</span> COM(<span class="string">"Rtxserver.collection"</span>);</span><br><span class="line">    <span class="variable">$objProp</span>-&gt;Add(<span class="string">"Username"</span>, <span class="variable">$receiver</span>);</span><br><span class="line">    <span class="variable">$Result</span>  = @<span class="variable">$ObjApi</span>-&gt;Call2(<span class="number">0x2001</span>, <span class="variable">$objProp</span>);</span><br><span class="line">    <span class="variable">$errstr</span>  = <span class="variable">$php_errormsg</span>;</span><br><span class="line">    <span class="keyword">if</span> (strcmp(<span class="variable">$nullstr</span>, <span class="variable">$errstr</span>) == <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="variable">$state</span> = intVal(<span class="variable">$Result</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable">$state</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>大功告成！有图有真相：<br><img src="/upload/images/eat_notify.jpg" alt="rtx提醒"></p>
+</li>
+</ol>
+<p>============= lanrenwo END =================</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>我们公司大概从2008年开始使用RTX内部通讯工具，直到2014年团队才使用RTX的Web API，陆陆续续实现了请假、预定会议室、故障报告等RTX提醒，给工作带来了很多便利，唯独只剩下点餐提醒，一直没有使用，依然还是人工通过公司群，提醒大家点餐。</p>
+<p>趁年末比较]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[CentOS下配置SFTP操作日志]]></title>

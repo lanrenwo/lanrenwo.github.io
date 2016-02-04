@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.hongfanqu.com/2016/02/04/RTX%E5%8F%91%E9%80%81%E7%82%B9%E9%A4%90%E6%8F%90%E9%86%92/</loc>
+    <lastmod>2016-02-04T06:47:56.242Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.hongfanqu.com/404.html</loc>
     <lastmod>2016-01-10T15:27:59.000Z</lastmod>
   </url>
@@ -12,7 +17,12 @@
   </url>
   
   <url>
-    <loc>http://www.hongfanqu.com/2014/03/31/ats_ssl/</loc>
+    <loc>http://www.hongfanqu.com/2014/06/03/ubuntu-php5/</loc>
+    <lastmod>2016-01-07T15:05:54.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.hongfanqu.com/2014/05/13/php-slow/</loc>
     <lastmod>2016-01-07T15:05:54.000Z</lastmod>
   </url>
   
@@ -27,12 +37,7 @@
   </url>
   
   <url>
-    <loc>http://www.hongfanqu.com/2014/06/03/ubuntu-php5/</loc>
-    <lastmod>2016-01-07T15:05:54.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.hongfanqu.com/2014/05/13/php-slow/</loc>
+    <loc>http://www.hongfanqu.com/2014/03/31/ats_ssl/</loc>
     <lastmod>2016-01-07T15:05:54.000Z</lastmod>
   </url>
   
