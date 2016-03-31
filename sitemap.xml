@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.hongfanqu.com/2016/03/31/mvn_sonar/</loc>
+    <lastmod>2016-03-31T08:21:48.486Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.hongfanqu.com/2014/12/07/360cdn/</loc>
     <lastmod>2016-03-31T08:19:07.708Z</lastmod>
   </url>
@@ -44,11 +49,6 @@
   <url>
     <loc>http://www.hongfanqu.com/2014/05/23/filename-too-long/</loc>
     <lastmod>2016-03-31T08:18:17.745Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.hongfanqu.com/2016/03/31/mvn/</loc>
-    <lastmod>2016-03-31T08:04:41.413Z</lastmod>
   </url>
   
   <url>
