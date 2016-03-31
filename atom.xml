@@ -45,7 +45,7 @@
     <link href="http://www.hongfanqu.com/2016/02/04/rtx-notify/"/>
     <id>http://www.hongfanqu.com/2016/02/04/rtx-notify/</id>
     <published>2016-02-04T06:03:38.000Z</published>
-    <updated>2016-03-31T08:05:40.114Z</updated>
+    <updated>2016-03-31T08:18:19.712Z</updated>
     <content type="html"><![CDATA[<p>我们公司大概从2008年开始使用RTX内部通讯工具，直到2014年团队才使用RTX的Web API，陆陆续续实现了请假、预定会议室、故障报告等RTX提醒，给工作带来了很多便利，唯独只剩下点餐提醒，一直没有使用，依然还是人工通过公司群，提醒大家点餐。</p>
 <p>趁年末比较有空，好好研究了RTX SDK，从中发现了很多接口，最终顺利实现了自动发送点餐提醒。</p>
 <p>下面给大家说一下具体业务代码：</p>
@@ -84,7 +84,7 @@
     <link href="http://www.hongfanqu.com/2014/12/18/sftp-log/"/>
     <id>http://www.hongfanqu.com/2014/12/18/sftp-log/</id>
     <published>2014-12-18T08:54:00.000Z</published>
-    <updated>2016-03-31T08:05:43.855Z</updated>
+    <updated>2016-03-31T08:18:20.309Z</updated>
     <content type="html"><![CDATA[<p>SFTP操作日志的重要性，不言而喻，之前也找过资料，一直没找着……<br>今天同事又提过这事，伤心的我，又去找了找，果然是老天不负我，竟然给我找着了，感激流涕中……<br>不敢私藏，赶紧分享给大伙！同时感谢Caesar的技术支持！<br>1、修改SSH配置：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># vim /etc/ssh/sshd_config</span><br><span class="line">Subsystem       sftp    /usr/libexec/openssh/sftp-server -l INFO -f local5</span><br><span class="line">LogLevel INFO</span><br></pre></td></tr></table></figure></p>
 <p>2、syslog.conf末尾增加一行：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># vim /etc/syslog.conf</span><br><span class="line">auth,authpriv.*,local5.* /var/log/sftp.log</span><br></pre></td></tr></table></figure></p>
 <p>3、重新加载服务：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># /etc/init.d/syslog reload</span><br><span class="line"># /etc/init.d/sshd reload</span><br></pre></td></tr></table></figure></p>
@@ -110,10 +110,10 @@
     <link href="http://www.hongfanqu.com/2014/12/07/360cdn/"/>
     <id>http://www.hongfanqu.com/2014/12/07/360cdn/</id>
     <published>2014-12-07T06:41:00.000Z</published>
-    <updated>2016-01-07T15:05:53.000Z</updated>
+    <updated>2016-03-31T08:19:07.708Z</updated>
     <content type="html"><![CDATA[<p>自从博客移至github pages后，心情也是大大的舒畅，妈妈从此再也不用担心我的学习了！<br>hexo架构的博客，也是极大的方便好用！light主题很漂亮，简洁，但是到了和谐的天朝，至于原因，你懂的….<br>不懂？那我还是普及一下吧：light使用的是googleapis的字体库和公共库，所以…<br>快去找救星吧！Keyman就是360提供的前端公共库CDN服务，你只要更改一个单词，就可以拥有它！<br>如果你也有此等烦恼，赶快行动吧^-^<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># ajax.googleapis.com 替换为 ajax.useso.com</span><br><span class="line">&lt;script type=&apos;text/javascript&apos; src=&apos;http://ajax.useso.com/ajax/libs/jquery/1.7.2/jquery.min.js?ver=3.4.2&apos;&gt;</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># fonts.googleapis.com 替换为 fonts.useso.com</span><br><span class="line">&lt;link href=&apos;http://fonts.useso.com/css?family=Open+Sans:300,400,600&amp;subset=latin,latin-ext&apos; rel=&apos;stylesheet&apos;&gt;</span><br></pre></td></tr></table></figure>
-<p>感谢360cdn: <a href="http://libs.useso.com/" target="_blank" rel="external">http://libs.useso.com/</a><br>大功告成！<br>============= lanrenwo END =================</p>
+<p>感谢360cdn: <a href="http://libs.useso.com/" target="_blank" rel="external">http://libs.useso.com/</a><br>大功告成！<br>============= hongfanqu END =================</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>自从博客移至github pages后，心情也是大大的舒畅，妈妈从此再也不用担心我的学习了！<br>hexo架构的博客，也是极大的方便好用！light主题很漂亮，简洁，但是到了和谐的天朝，至于原因，你懂的….<br>不懂？那我还是普及一下吧：light使用的是googlea]]>
@@ -130,9 +130,9 @@
     <link href="http://www.hongfanqu.com/2014/11/20/ats-content-length/"/>
     <id>http://www.hongfanqu.com/2014/11/20/ats-content-length/</id>
     <published>2014-11-20T05:23:03.000Z</published>
-    <updated>2016-01-07T15:05:53.000Z</updated>
+    <updated>2016-03-31T08:18:56.798Z</updated>
     <content type="html"><![CDATA[<p>　　自从公司内部的CDN，换成Nginx=&gt;Varnish=&gt;ATS的架构后，稳定性大大的加强了。<br>　　 Nginx通过hash解决了cache抖动的问题，Varnish的内存缓存非常的强大，可定制性太强了，很方便的content-length不等于0时，不缓存对象。<br>　　 ATS的中文文档太少了，再加上有童鞋建议使用lua来实现Content-Length的问题，让我头痛不已。<br>　　其实ATS可以通过配置参数，来实现不缓存Content-Length为0的对象，配置参数如下：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#是否缓存Content-Length为0的缓存，默认值为1</span><br><span class="line">CONFIG proxy.config.http.cache.allow_empty_doc INT 0</span><br></pre></td></tr></table></figure></p>
-<p>大功告成！<br>============= lanrenwo END =================</p>
+<p>大功告成！<br>============= hongfanqu END =================</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>　　自从公司内部的CDN，换成Nginx=&gt;Varnish=&gt;ATS的架构后，稳定性大大的加强了。<br>　　 Nginx通过hash解决了cache抖动的问题，Varnish的内存缓存非常的强大，可定制性太强了，很方便的content-length不等于0时，]]>
@@ -151,7 +151,7 @@
     <link href="http://www.hongfanqu.com/2014/11/19/icombo/"/>
     <id>http://www.hongfanqu.com/2014/11/19/icombo/</id>
     <published>2014-11-19T05:22:52.000Z</published>
-    <updated>2016-03-31T08:05:30.729Z</updated>
+    <updated>2016-03-31T08:18:18.643Z</updated>
     <content type="html"><![CDATA[<p>iCombo提供比Minify、concat模块更好的并发性能，iCombo，你值得拥有！<br>目前在10万PV的网站稳定使用3个月，即将在3百万PV的网站上线，敬请期待！<br>欢迎提出建议，QQ讨论群：38390139</p>
 <p>[特性]<br>1、兼容minify的 f 参数，如 ?f=1.css,2.css,3.css<br>2、可以将图片的相对路径，替换为域名的方式<br>3、压缩CSS的代码（删除注释、换行、精简颜色等）<br>4、一键删除服务器的所有缓存文件<br>5、错误日志记录</p>
 <p>[环境要求]<br>Nginx: 1.6+<br>Ngx_lua: 0.9.12+<br>LUAJIT: 2.0.2+</p>
@@ -178,7 +178,7 @@
     <link href="http://www.hongfanqu.com/2014/06/03/ubuntu-php5/"/>
     <id>http://www.hongfanqu.com/2014/06/03/ubuntu-php5/</id>
     <published>2014-06-03T05:22:39.000Z</published>
-    <updated>2016-03-31T08:05:47.042Z</updated>
+    <updated>2016-03-31T08:18:21.226Z</updated>
     <content type="html"><![CDATA[<h2 id="1_u3001_u5B89_u88C5php5_uFF1A"><a href="#1_u3001_u5B89_u88C5php5_uFF1A" class="headerlink" title="1、安装php5："></a>1、安装php5：</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">apt-get install php5-fpm</span><br></pre></td></tr></table></figure>
 <h2 id="2_u3001_u5B89_u88C5phpize_uFF1A"><a href="#2_u3001_u5B89_u88C5phpize_uFF1A" class="headerlink" title="2、安装phpize："></a>2、安装phpize：</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">apt-get install php5-dev</span><br></pre></td></tr></table></figure>
 <h2 id="3_u3001_u67E5_u770B_u7ED3_u679C_uFF1A"><a href="#3_u3001_u67E5_u770B_u7ED3_u679C_uFF1A" class="headerlink" title="3、查看结果："></a>3、查看结果：</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ll /usr/bin/php</span><br><span class="line">php php5 php-config php-config5 phpize phpize5</span><br></pre></td></tr></table></figure>
@@ -202,10 +202,10 @@
     <link href="http://www.hongfanqu.com/2014/05/23/filename-too-long/"/>
     <id>http://www.hongfanqu.com/2014/05/23/filename-too-long/</id>
     <published>2014-05-23T05:22:26.000Z</published>
-    <updated>2016-01-07T15:05:54.000Z</updated>
+    <updated>2016-03-31T08:18:17.745Z</updated>
     <content type="html"><![CDATA[<p>最近在研究Weed-FS，没想到，下载这一步，就遇到了问题，提示File name too long！<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># wget http://dl.bintray.com/chrislusf/Weed-FS/weed_0.58_linux_amd64.tar.gz</span><br><span class="line">--2014-03-29 10:15:02-- http://dl.bintray.com/chrislusf/Weed-FS/weed_0.58_linux_amd64.tar.gz</span><br><span class="line">Resolving dl.bintray.com... 108.168.194.92, 108.168.194.91</span><br><span class="line">Connecting to dl.bintray.com|108.168.194.92|:80... connected.</span><br><span class="line">HTTP request sent, awaiting response... 302</span><br><span class="line">....</span><br><span class="line">...</span><br><span class="line">... 4M5VTQ&apos; (File name too long)</span><br></pre></td></tr></table></figure></p>
 <p>赶紧Google一下，你就知道。<br>原来答案是如此的简单，真是孤陋寡闻，真得好好学习，天天向上。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">wget -O weedfs.tar.gz http://dl.bintray.com/chrislusf/Weed-FS/weed_0.58_linux_amd64.tar.gz</span><br></pre></td></tr></table></figure></p>
-<p>============= lanrenwo END =================</p>
+<p>============= hongfanqu END =================</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>最近在研究Weed-FS，没想到，下载这一步，就遇到了问题，提示File name too long！<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line]]>
@@ -222,7 +222,7 @@
     <link href="http://www.hongfanqu.com/2014/05/13/php-slow/"/>
     <id>http://www.hongfanqu.com/2014/05/13/php-slow/</id>
     <published>2014-05-13T05:13:00.000Z</published>
-    <updated>2016-03-31T08:05:34.561Z</updated>
+    <updated>2016-03-31T08:18:19.157Z</updated>
     <content type="html"><![CDATA[<p>　在我们的项目中，开启PHP的慢速日志（request_slowlog_timeout = 10s）是必选项，并且它也让我们发现了很多坑，解决了很多的性能问题。</p>
 <p> 　昨天由于碰到了一个非常奇怪的问题，让我们不得不关闭PHP慢速日志，问题是什么呢？</p>
 <p>　问题：程序会报 2013(Lost connection to MySQL server during query)<br>　 分析：<br>　　1）在我们的后台程序中，会执行一个循环（&gt;300次），循环中会重复执行一条SQL语句；<br>　　2）Nginx的访问日志，程式每次执行时间，都在12秒左右；<br>　　3）修改mysql连接类，query之前，执行mysql_ping也无效，问题依旧；</p>
@@ -253,7 +253,7 @@
     <link href="http://www.hongfanqu.com/2014/03/31/ats_ssl/"/>
     <id>http://www.hongfanqu.com/2014/03/31/ats_ssl/</id>
     <published>2014-03-31T04:59:35.000Z</published>
-    <updated>2016-01-07T15:05:54.000Z</updated>
+    <updated>2016-03-31T08:18:54.618Z</updated>
     <content type="html"><![CDATA[<p>截止到现在，我们的网站使用 ATS 已经有2年多的时间了，ATS能够非常高效的解决我们的问题，赞一个。</p>
 <p>　由于网站增加了https的访问，原以为配置SSL应该挺简单，后来才知道，英文水平太菜，导致走了很多弯路。</p>
 <p>　下面列一下我配置的步骤：<br>　　系统：CentOS<br>　　ATS：4.2版本</p>
@@ -261,7 +261,7 @@
 <p>　二、修改 remap.config：<br>   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">map https://photo.xxx.com.tw/ https://xxx.xxx.xxx.xxx/</span><br></pre></td></tr></table></figure></p>
 <p>　三、修改 ssl_multicert.config：<br>   <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">dest_ip=* ssl_cert_name=xxx.cert.crt ssl_key_name=xxx.cert.key</span><br></pre></td></tr></table></figure></p>
 <p>　四、大功告成，重启ATS。</p>
-<p>============= lanrenwo END =================</p>
+<p>============= hongfanqu END =================</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>截止到现在，我们的网站使用 ATS 已经有2年多的时间了，ATS能够非常高效的解决我们的问题，赞一个。</p>
