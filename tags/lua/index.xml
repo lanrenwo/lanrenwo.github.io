@@ -1,26 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>lua on 懒人窝</title>
-    <link>http://localhost:1313/tags/lua/</link>
-    <description>Recent content in lua on 懒人窝</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Wed, 19 Nov 2014 13:22:52 +0000</lastBuildDate>
-    
-	<atom:link href="http://localhost:1313/tags/lua/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>iCombo开源喽！ Lua版minify，合并CSS、JS文件、减少连接数。</title>
-      <link>http://localhost:1313/2014/11/19/icombo/</link>
-      <pubDate>Wed, 19 Nov 2014 13:22:52 +0000</pubDate>
-      
-      <guid>http://localhost:1313/2014/11/19/icombo/</guid>
-      <description>&lt;p&gt;iCombo提供比Minify、concat模块更好的并发性能，iCombo，你值得拥有！&lt;/p&gt;
-
-&lt;p&gt;目前在10万PV的网站稳定使用3个月，即将在3百万PV的网站上线，敬请期待！&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>lua on 懒人窝</title><link>http://localhost:1313/tags/lua/</link><description>Recent content in lua on 懒人窝</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Wed, 19 Nov 2014 13:22:52 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/lua/index.xml" rel="self" type="application/rss+xml"/><item><title>iCombo开源喽！ Lua版minify，合并CSS、JS文件、减少连接数。</title><link>http://localhost:1313/2014/11/19/icombo/</link><pubDate>Wed, 19 Nov 2014 13:22:52 +0000</pubDate><guid>http://localhost:1313/2014/11/19/icombo/</guid><description>&lt;p&gt;iCombo提供比Minify、concat模块更好的并发性能，iCombo，你值得拥有！&lt;/p&gt;
+&lt;p&gt;目前在10万PV的网站稳定使用3个月，即将在3百万PV的网站上线，敬请期待！&lt;/p&gt;</description></item></channel></rss>
