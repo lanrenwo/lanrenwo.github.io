@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>redmine on 懒人窝</title>
+    <link>http://localhost:1313/tags/redmine/</link>
+    <description>Recent content in redmine on 懒人窝</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 12 Apr 2016 14:39:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/redmine/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PHP LDAP连接微软Active Directory域服务</title>
+      <link>http://localhost:1313/2016/04/12/php-ldap/</link>
+      <pubDate>Tue, 12 Apr 2016 14:39:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2016/04/12/php-ldap/</guid>
+      <description>&lt;p&gt;　　自从在OA系统、Redmine、Gitlab使用LDAP后，感觉整个世界都清静很多了，再也不用记，辣么多账号密码了！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

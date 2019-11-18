@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rtx群广播 on 懒人窝</title>
+    <link>http://localhost:1313/tags/rtx%E7%BE%A4%E5%B9%BF%E6%92%AD/</link>
+    <description>Recent content in rtx群广播 on 懒人窝</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 04 Feb 2016 14:03:38 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/rtx%E7%BE%A4%E5%B9%BF%E6%92%AD/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>RTX发送点餐提醒</title>
+      <link>http://localhost:1313/2016/02/04/rtx-notify/</link>
+      <pubDate>Thu, 04 Feb 2016 14:03:38 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2016/02/04/rtx-notify/</guid>
+      <description>&lt;p&gt;我们公司大概从2008年开始使用RTX内部通讯工具，直到2014年团队才使用RTX的Web API，陆陆续续实现了请假、预定会议室、故障报告等RTX提醒，给工作带来了很多便利，唯独只剩下点餐提醒，一直没有使用，依然还是人工通过公司群，提醒大家点餐。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

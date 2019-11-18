@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ats on 懒人窝</title>
+    <link>http://localhost:1313/tags/ats/</link>
+    <description>Recent content in ats on 懒人窝</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 20 Nov 2014 13:23:03 +0000</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/ats/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Apache Traffic Server(ATS)缓存Content-Length为0字节的问题</title>
+      <link>http://localhost:1313/2014/11/20/ats-content-length/</link>
+      <pubDate>Thu, 20 Nov 2014 13:23:03 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2014/11/20/ats-content-length/</guid>
+      <description>&lt;p&gt;自从公司内部的CDN，换成Nginx=&amp;gt;Varnish=&amp;gt;ATS的架构后，稳定性大大的加强了。&lt;/p&gt;
+
+&lt;p&gt;Nginx通过hash解决了cache抖动的问题，Varnish的内存缓存非常的强大，可定制性太强了，很方便的content-length不等于0时，不缓存对象。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
