@@ -3554,3 +3554,7 @@ body {
 #toc > #TableOfContents > ul > li {
     margin-left: -10px;
 }
+
+#git-comments {
+    margin:30px;
+}
